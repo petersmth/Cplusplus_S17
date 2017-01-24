@@ -1,3 +1,5 @@
+//Peter Smith 1 24 2017 git edit test
+
 #include <iostream>
 
 bool odd(int n){
@@ -6,7 +8,7 @@ return true;
 }
 
 int main(){
-std::cout << "testqt \n";
+std::cout << "hello \n";
 
 for(int i=0; i<100; i++) std::cout << odd(i) << "\t";
 
