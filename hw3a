@@ -3,11 +3,27 @@ using namespace std;
 
 class Vec3d{
 private:
-
+	double x,y,z;
 public:
-
-
-
+	Vec3d(double x = 0, double y = 0, double z =0): x(x), y(y), z(z){}
+	friend ostream& operator<<(ostream& s, Vec3d a){
+		return s << '(' << a.x << ',' << a.y << ',' << a.z << ')'; 
+	}
+	Vec3d add(const Vec3d& b) const{
+		return Vec3d(x+b.x, y+b.y, z+b.z);
+	}
+	friend Vec3d operator+ (const Vec3d& a, const Vec3d& b){
+		return a.add(b);
+	}
+	double dot(const Vec3d& b) const{
+		return x*b.x + y*b.y + z*b.z;
+	}
+	friend Vec3d operator* (const Vec3d& a, double n){
+		return Vec3d(a.x*n,a.y*n,a.z*n);
+	}
+	friend Vec3d operator* (double n, const Vec3d& a){
+		return Vec3d(a.x*n,a.y*n,a.z*n);
+	}
 };
 
 
