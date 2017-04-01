@@ -1,33 +1,11 @@
 #include <iostream>
-#include <string>
-
-class testclass{
-	public:
-	int a;
-	int b;
-	char ch;
-
-	testclass(int a1, int b1, char ch1){
-		a = a1;
-		b=b1;
-		ch=ch1;
-	}
-
-	int add (){
-		return a+b;
-	}
-	
-	void print (){
-		std::string str;
-		str.push_back(ch);
-		str.insert(1,"ool");
-		std::cout << str << '\n';
-	}
-};
+#include "testclass.h"
+#include "function.h"
 
 int main(){
-testclass inst(3,20,'t');
+testclass inst(300,-20,'f');
 std::cout << inst.add() << '\t';
 inst.print();
+std::cout << f(2,'X') << '\n';
 return 0;
 } 
