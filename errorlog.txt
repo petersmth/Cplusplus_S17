@@ -1,0 +1,4 @@
+juliandate.cpp: In member function 'int JulianDate::getYear() const':
+juliandate.cpp:54:5: error: expected ',' or ';' before 'L'
+     L= L-(146097*N+3)/4.0
+     ^

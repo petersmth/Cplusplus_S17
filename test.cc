@@ -1,17 +1,9 @@
 #include <iostream>
 using namespace std;
 
-int x;
-void f(int x) {
-  static int y = 1;
-  x++;
-  cout << x << ::x << y++;
-  ::x--;
-}
 
 int main() {
-  int x = 2;
-  f(x);
-  cout << x;
-  f(x);
+	double f = 555.2 + int(55/22.0)*44 +3*int(44.2*int(5.3));
+	cout << f;
+	return 0;
 }
